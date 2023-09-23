@@ -1,8 +1,8 @@
 pub mod console
 {
-	pub fn out(text: String)
+	pub fn out<Text: Into<String>>(text: Text)
 	{
-		print!("{}", text);
+		print!("{}", text.into());
 	}
 }
 
